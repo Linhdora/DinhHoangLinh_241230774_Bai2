@@ -1,0 +1,11 @@
+﻿@model IEnumerable<DinhHoangLinh_241230774_Bai2.Models.TaiSan>
+@{
+    ViewData["Title"] = "Home Page";
+}
+ <main class="main">
+        <div class="container">
+            <div class="banner"><img src="images/banner.jpg" alt="Banner" /></div>
+            <div id="danhSach">
+@await Html.PartialAsync("DanhSach",Model)
+</div>
+</div>

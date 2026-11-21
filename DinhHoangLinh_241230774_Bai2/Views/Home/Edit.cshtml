@@ -1,0 +1,29 @@
+﻿@model DinhHoangLinh_241230774_Bai2.Models.TaiSan
+<h3>Sua thong tin tai san</h3>
+<form asp-action="Edit" method="post">
+       <input type="hidden" asp-for="MaTs" />
+       <div>
+           <label asp-for="MaLoai"></label>
+           <select asp-for="MaLoai" asp-items="ViewBag.DsLoai"></select>
+           <span asp-validation-for="MaLoai" class="text-danger"></span>
+       </div>
+       <div>
+           <label asp-for="TenTs"></label>
+           <input asp-for="TenTs"/>
+        <span asp-validation-for="TenTs" class="text-danger"></span>
+
+       </div>
+       <div>
+          <label asp-for="NguyenGia"></label>
+           <input asp-for="NguyenGia" type="text"/>
+        <span asp-validation-for="NguyenGia" class="text-danger"></span>
+
+       </div>
+       <div>
+          <label asp-for="Anh"></label>
+           <input asp-for="Anh"/>
+        <span asp-validation-for="Anh" class="text-danger"></span>
+
+       </div>
+       <button type="submit">Luu</button>
+</form>
